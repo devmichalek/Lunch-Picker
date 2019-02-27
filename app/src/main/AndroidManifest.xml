@@ -9,28 +9,13 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme">
+        android:theme="@style/AppThemeNew">
         <activity android:name=".SettingsActivity"></activity>
-        <activity
-            android:name=".MainActivity"
-            android:theme="@android:style/Theme.Black.NoTitleBar.Fullscreen">
-            <intent-filter android:label="Launch Picker">
-                <action android:name="android.intent.action.VIEW" />
+        <activity android:name=".MainActivity">
+            <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
-                <category android:name="android.intent.category.DEFAULT" />
-                <category android:name="android.intent.category.BROWSABLE" />
-                <!-- Accepts URIs that begin with "http://www.example.com/launchpicker” -->
-                <data
-                    android:host="www.ivy.launchpicker.com"
-                    android:pathPrefix="/launchpicker"
-                    android:scheme="http" />
-                <!-- note that the leading "/" is required for pathPrefix -->
-                <!-- Accepts URIs that begin with "example://launchpicker” -->
-                <data
-                    android:host="launchpicker"
-                    android:scheme="example" />
             </intent-filter>
         </activity>
     </application>
